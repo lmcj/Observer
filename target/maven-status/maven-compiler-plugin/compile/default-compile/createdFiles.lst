@@ -1,0 +1,11 @@
+dominio\InformeGraficos.class
+dominio\InformeConsola.class
+patronObserver\Observer.class
+patronObserver\DataSource.class
+main\observer\main.class
+modelo\GenerarDatos.class
+dominio\InformeTabla.class
+patronObserver\Informe.class
+patronObserver\Gestion.class
+controlador\Controlador.class
+modelo\Dato.class
