@@ -14,20 +14,20 @@ public class Gestion<T> implements DataSource<T> {
     }
 
     @Override
-    public void removeObserver(Observer<T> observer) {
+    public void eleminarObserver(Observer<T> observer) {
         observers.remove(observer);
     }
 
     @Override
-    public void notifyObservers() {
+    public void notificarObservers() {
         for (Observer<T> observer : observers) {
-            observer.update((T) data);
+            observer.actualizar((T) data);
        }
     }
 
     @Override
     public void setData(List<T> data) {
         this.data = data;
-        notifyObservers();
+        notificarObservers();
     }
 }

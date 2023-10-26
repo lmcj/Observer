@@ -12,7 +12,7 @@ public class InformeGraficos<T> extends Informe<T> {
     }
 
     @Override
-    protected void imprimir(List<Object> datos) {
-        System.out.println("InformeGraficos: " + datos);
+    protected List<Object> almacenar(List<Object> datos) {
+        return datos;
     }
 }

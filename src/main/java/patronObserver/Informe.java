@@ -13,17 +13,17 @@ public abstract class Informe<T> implements Observer<T> {
     }
 
     @Override
-    public void update(T data) {
+    public void actualizar(T data) {
         if (data instanceof List<?>) {
             List<?> lista = (List<?>) data;
             for (Object item : lista) {
                 if (item instanceof Dato) {
                     Dato dato = (Dato) item;
-                    imprimir(dato.toList());
+                    almacenar(dato.toList());
                 }
             }
         }
     }
 
-    protected abstract void imprimir(List<Object> datos);
+    protected abstract List<Object> almacenar(List<Object> datos);
 }

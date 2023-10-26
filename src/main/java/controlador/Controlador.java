@@ -1,5 +1,8 @@
 package controlador;
 
+import Vistas.Consola;
+import Vistas.GraficaSensores;
+import Vistas.Tabla;
 import dominio.InformeConsola;
 import dominio.InformeGraficos;
 import dominio.InformeTabla;
@@ -31,6 +34,9 @@ public class Controlador {
     }
 
     public void iniciar() throws InterruptedException {
+        Consola consola = new Consola();
+        GraficaSensores grafica = new GraficaSensores();
+        Tabla tablas = new Tabla();
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -38,7 +44,11 @@ public class Controlador {
                 List<Dato> datos = generarDatos.generarDatos();
                 System.out.println("\nNuevos datos: " + datos.size());
                 dataSource.setData(datos);
+                
+                consola.Imprimir(datos);
+                grafica.Graficar(datos);
+                tablas.ImprimirTabla(datos);
             }
-        }, 0, 5000); 
+        }, 0, 10000); 
     }
 }

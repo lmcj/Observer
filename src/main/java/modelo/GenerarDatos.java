@@ -8,7 +8,7 @@ public class GenerarDatos {
 
     public List<Dato> generarDatos() {
         Random random = new Random();
-        int cantidadDatos = random.nextInt(50);
+        int cantidadDatos = random.nextInt(100);
         List<Dato> datos = new ArrayList<>();
         for (int i = 0; i < cantidadDatos; i++) {
             Dato dato = new Dato();

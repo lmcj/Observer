@@ -2,5 +2,5 @@
 package patronObserver;
 
 public interface Observer<T> {
-    void update(T data);
+    void actualizar(T data);
 }
